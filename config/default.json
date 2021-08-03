@@ -1,3 +1,5 @@
 {
-    "mongoURI": "mongodb+srv://izart1994:124578@devconnector.3bwjv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://izart1994:124578@devconnector.3bwjv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubToken": "c7fede7386aa7d534f4c"
 }
