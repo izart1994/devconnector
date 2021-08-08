@@ -159,6 +159,7 @@ router.delete(
             // Remove profile
             // Remove user
             await Promise.all([
+                Post.deleteMany({ user: req.user.id }),
                 Profile.findOneAndRemove({ user: req.user.id }),
                 User.findOneAndRemove({ _id: req.user.id })
             ]);
