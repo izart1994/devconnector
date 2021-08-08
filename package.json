@@ -1,7 +1,6 @@
 {
   "name": "devconnector",
   "version": "1.0.0",
-  "type": "module",
   "description": "Social Network For Developer",
   "main": "server.js",
   "scripts": {
