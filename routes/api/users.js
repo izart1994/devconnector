@@ -1,10 +1,10 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const gravatar = require('gravatar');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const config = require('config');
-const { check, validationResult } = require('express-validator');
+import gravatar from 'gravatar';
+import jwt from 'jsonwebtoken';
+import config from 'config';
+import bcrypt from 'bcryptjs';
+import { check, validationResult } from 'express-validator';
 import normalize from 'normalize-url';
 
 const User = require('../../models/User');
