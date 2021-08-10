@@ -2,6 +2,11 @@ import express from 'express';
 import connectDB from './config/db.js';
 import path from 'path';
 
+import users from './routes/api/users.js';
+import profile from './routes/api/profile.js';
+import posts from './routes/api/posts.js';
+import auth from './routes/api/auth.js';
+
 const app = express();
 
 // Connect Database
@@ -11,10 +16,10 @@ connectDB();
 app.use(express.json());
 
 // Define Routes
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/profile', require('./routes/api/profile'));
-app.use('/api/posts', require('./routes/api/posts'));
-app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/users', users);
+app.use('/api/profile', profile);
+app.use('/api/posts', posts);
+app.use('/api/auth', auth);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
